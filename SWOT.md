@@ -2,7 +2,7 @@
 
 [← Ana sayfa](README.md)
 
-Bu analiz, **Hafta 1–4 laboratuvar çalışmasının kendisini** (yöntem, içerik ve repo olarak sunumu) değerlendirir — makineyi veya üreticiyi değil.
+Bu analiz, **Hafta 1–5 laboratuvar çalışmasının kendisini** (yöntem, içerik ve repo olarak sunumu) değerlendirir — makineyi veya üreticiyi değil.
 
 |  | **Yardımcı** | **Zararlı** |
 |---|---|---|
@@ -19,6 +19,7 @@ Bu analiz, **Hafta 1–4 laboratuvar çalışmasının kendisini** (yöntem, iç
 - **İnsan odaklı risk kuralları:** "S=3 ise öne al" ve "Altın kural: bu, hattaki insana ne yapar?" yaklaşımı, skorun ciddi bir yaralanmayı gizlemesini engelliyor.
 - **Şeffaflık:** Doğrulanamayan her nokta *(varsayım)* olarak işaretlenmiş, kaynaklar listelenmiş, sorumluluk reddi açık.
 - **Tarafsızlık:** Hafta 4 çözüm dayatmıyor, gereksinim tanımlıyor; tasarım kararını üreticiye bırakıyor.
+- **Olgun zafiyet yönetimi yaklaşımı:** Hafta 5, CVSS skoruna körü körüne tepki vermek yerine üç şart kontrolü, önce test, yedek/geri dönüş planı ve yama sonrası emniyet re-validasyonunu içeren gerçekçi bir karar akışı kuruyor.
 - **Sürüm kontrollü, okunabilir format:** Markdown + Mermaid diyagramlarıyla GitHub'da doğrudan okunabiliyor, değişiklik geçmişi izlenebiliyor.
 
 ## ⚠️ Zayıf Yönler (Weaknesses)
@@ -28,7 +29,8 @@ Bu analiz, **Hafta 1–4 laboratuvar çalışmasının kendisini** (yöntem, iç
 - **Basit risk modeli:** L × S × E (1–3) eğitim için anlaşılır ama ince ayrım yapamıyor; EN ISO 12100 / ISO 13849-1 risk grafiği veya IEC 62443-3-2 ile resmî olarak eşleştirilmemiş.
 - **Sınırlı senaryo sayısı:** Risk Register yalnızca 3 senaryo içeriyor; içeriden kötü niyetli kullanıcı, tedarik zinciri (firmware güncellemesi) veya fiziksel HMI müdahalesi gibi kapılar ayrı ele alınmamış.
 - **PL değeri doğrulanmamış:** PLr e / Kat. 4 "tipik beklenti" olarak alınmış; hesaplama (MTTFd, DC, CCF) yapılmamış.
-- **Eksik kapsam:** Hafta 5–7 (SBOM/CVE, CRA olayı, YZ) bu repoda henüz yok; uçtan uca resim tamamlanmamış.
+- **Eksik kapsam:** Hafta 6–7 (CRA olayı, YZ) bu repoda henüz yok; uçtan uca resim tamamlanmamış.
+- **Örnek zafiyet kaydı:** Hafta 5'teki CVE (CVE-XXXX-XXXX, Component X) eğitim amaçlı bir yer tutucudur; gerçek bir SBOM veya üretici bildirimi üzerinden çalışılmamıştır.
 
 ## 🚀 Fırsatlar (Opportunities)
 
@@ -36,7 +38,7 @@ Bu analiz, **Hafta 1–4 laboratuvar çalışmasının kendisini** (yöntem, iç
 - **Şablon olarak yeniden kullanım:** Aynı föy yapısı başka makinelere (pres, robot hücresi, lazer kesim) kolayca uyarlanabilir; repo bir "laboratuvar şablonu" hâline getirilebilir.
 - **Portföy değeri:** Disiplinler arası (OT güvenliği + fonksiyonel emniyet) bir çalışma olarak iş başvurularında ve mesleki gelişimde gösterilebilir.
 - **Topluluk katkısı:** Açık repo olarak paylaşılırsa diğer katılımcılar issue / pull request ile senaryo ve iyileştirme ekleyebilir.
-- **Derinleştirme:** IEC 62443-3-2 hedef güvenlik seviyeleri (SL-T), ISO 13849 PL hesabı veya CSAF/VEX ile SBOM entegrasyonu eklenerek eğitim düzeyinden profesyonel düzeye taşınabilir.
+- **Derinleştirme:** IEC 62443-3-2 hedef güvenlik seviyeleri (SL-T), ISO 13849 PL hesabı veya Hafta 5'in üzerine CycloneDX/SPDX formatında gerçek bir SBOM ve CSAF/VEX bildirimleri eklenerek eğitim düzeyinden profesyonel düzeye taşınabilir.
 - **Üretici diyaloğu:** Varsayımlar listesi, ileride üretici veya bir kullanıcı firmayla doğrulama görüşmesi için hazır bir soru listesi işlevi görür.
 
 ## 🌩️ Tehditler (Threats)

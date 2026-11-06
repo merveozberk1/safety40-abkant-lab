@@ -1,9 +1,9 @@
-# 🛡️ Safety 4.0 Bootcamp — Abkant Pres Laboratuvarları (Hafta 1–4)
+# 🛡️ Safety 4.0 Bootcamp — Abkant Pres Laboratuvarları (Hafta 1–5)
 
 > **INSPECCO × KRIPTARIUM · Safety 4.0 Bootcamp**
 > Ermaksan Power-Bend Pro CNC hidrolik abkant pres üzerinde **fonksiyonel emniyet (functional safety)** ile **endüstriyel siber güvenliği (OT security)** birleştiren laboratuvar çalışmaları.
 
-![Hafta](https://img.shields.io/badge/kapsam-Hafta%201--4-0f766e)
+![Hafta](https://img.shields.io/badge/kapsam-Hafta%201--5-0f766e)
 ![Makine](https://img.shields.io/badge/makine-Ermaksan%20Power--Bend%20Pro-1e3a8a)
 ![Standartlar](https://img.shields.io/badge/standart-ISO%2013849%20%7C%20IEC%2062443%20%7C%20CRA-b91c1c)
 ![Durum](https://img.shields.io/badge/durum-e%C4%9Fitim%20%C3%A7%C4%B1kt%C4%B1s%C4%B1-6b7280)
@@ -12,13 +12,14 @@
 
 ## 📌 Bu repo nedir?
 
-Bootcamp'in ilk dört haftasında doldurulan laboratuvar föylerinin düzenlenmiş, okunabilir ve sürüm kontrollü hâlidir. Her hafta tek bir soruya cevap verir ve bir sonraki haftanın girdisini üretir:
+Bootcamp'in ilk beş haftasında doldurulan laboratuvar föylerinin düzenlenmiş, okunabilir ve sürüm kontrollü hâlidir. Her hafta tek bir soruya cevap verir ve bir sonraki haftanın girdisini üretir:
 
 ```
 Hafta 1  Neyi koruyoruz?          → Safety Function Map
 Hafta 2  Nasıl bölgelere ayırırız? → Zone / Conduit Diagram
 Hafta 3  En büyük risk hangisi?    → Risk Register
 Hafta 4  Uzaktan erişimi nasıl güvenli yaparız? → Secure Architecture
+Hafta 5  Bir açık çıktığında ne yaparız? → Vulnerability Decision
 ```
 
 ## 🗂️ Haftalar
@@ -29,6 +30,7 @@ Hafta 4  Uzaktan erişimi nasıl güvenli yaparız? → Secure Architecture
 | 02 | [IEC 62443 Mini Workshop](labs/hafta-02-iec62443-zone-conduit/) | Zone / Conduit Diagram | EP 05 |
 | 03 | [Threat & Risk + Risk Matrix](labs/hafta-03-threat-risk-matrix/) | Risk Register | EP 04 |
 | 04 | [Secure Remote Access](labs/hafta-04-secure-remote-access/) | Secure Architecture | EP 02 + EP 06 |
+| 05 | [SBOM / CVE / Patch](labs/hafta-05-sbom-cve-patch/) | Vulnerability Decision | EP 09 · 10 · 11 |
 
 ## 🏭 İncelenen makine
 
@@ -66,11 +68,12 @@ flowchart LR
 │   ├── hafta-01-safety-architecture/
 │   ├── hafta-02-iec62443-zone-conduit/
 │   ├── hafta-03-threat-risk-matrix/
-│   └── hafta-04-secure-remote-access/
+│   ├── hafta-04-secure-remote-access/
+│   └── hafta-05-sbom-cve-patch/
 ├── docs/
 │   └── kaynaklar-ve-varsayimlar.md
 └── assets/
-    ├── Hafta01-04_Lab_Foyleri.pdf  ← orijinal föyler (kapak + Hafta 1–4 + kaynaklar)
+    ├── Hafta01-05_Lab_Foyleri.pdf  ← orijinal föyler (kapak + Hafta 1–5 + kaynaklar)
     └── foyler/                     ← sayfa görüntüleri
 ```
 
@@ -80,6 +83,7 @@ flowchart LR
 2. **Altın kural:** Zincir "veri çalındı" ile bitiyorsa emniyet bulgusu değildir — *bu, hattaki insana ne yapar?*
 3. **S = 3 ise öne al:** Ciddiyet geri dönüşsüzse skor düşük olsa bile senaryo görünür kalır.
 4. **İki katman, ikisi de şart:** erişim güvenliği (girişi zorlaştır) + emniyet bağımsızlığı (girse bile insan korunur).
+5. **CVSS tek başına karar değildir:** bileşen var mı, sürüm etkileniyor mu, açık ulaşılabilir mi? Yama önce test edilir, sonra emniyet validasyonu tekrarlanır.
 
 ## 📚 Mevzuat ve standartlar
 
@@ -91,7 +95,7 @@ Ayrıntılı kaynak listesi ve varsayımlar: [docs/kaynaklar-ve-varsayimlar.md](
 
 ## 🔜 Sonraki haftalar
 
-Hafta 5–7 (SBOM/CVE/Patch · CRA Incident Simulation · AI Safety Challenge) bu repoya ileride eklenecektir.
+Hafta 6–7 (CRA Incident Simulation · AI Safety Challenge) bu repoya ileride eklenecektir.
 
 ---
 

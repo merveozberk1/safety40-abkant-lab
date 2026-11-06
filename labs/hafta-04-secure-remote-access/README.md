@@ -2,7 +2,7 @@
 
 **Çıktı:** Secure Architecture → Evidence Pack **EP 02 + EP 06**
 
-[← Hafta 03](../hafta-03-threat-risk-matrix/) · [Ana sayfa](../../README.md)
+[← Hafta 03](../hafta-03-threat-risk-matrix/) · [Ana sayfa](../../README.md) · [Hafta 05 →](../hafta-05-sbom-cve-patch/)
 
 ---
 
