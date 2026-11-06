@@ -1,9 +1,9 @@
-# 🛡️ Safety 4.0 Bootcamp — Abkant Pres Laboratuvarları (Hafta 1–5)
+# 🛡️ Safety 4.0 Bootcamp — Abkant Pres Laboratuvarları (Hafta 1–7)
 
 > **INSPECCO × KRIPTARIUM · Safety 4.0 Bootcamp**
 > Ermaksan Power-Bend Pro CNC hidrolik abkant pres üzerinde **fonksiyonel emniyet (functional safety)** ile **endüstriyel siber güvenliği (OT security)** birleştiren laboratuvar çalışmaları.
 
-![Hafta](https://img.shields.io/badge/kapsam-Hafta%201--5-0f766e)
+![Hafta](https://img.shields.io/badge/kapsam-Hafta%201--7-0f766e)
 ![Makine](https://img.shields.io/badge/makine-Ermaksan%20Power--Bend%20Pro-1e3a8a)
 ![Standartlar](https://img.shields.io/badge/standart-ISO%2013849%20%7C%20IEC%2062443%20%7C%20CRA-b91c1c)
 ![Durum](https://img.shields.io/badge/durum-e%C4%9Fitim%20%C3%A7%C4%B1kt%C4%B1s%C4%B1-6b7280)
@@ -12,7 +12,7 @@
 
 ## 📌 Bu repo nedir?
 
-Bootcamp'in ilk beş haftasında doldurulan laboratuvar föylerinin düzenlenmiş, okunabilir ve sürüm kontrollü hâlidir. Her hafta tek bir soruya cevap verir ve bir sonraki haftanın girdisini üretir:
+Bootcamp'in yedi haftasında doldurulan laboratuvar föylerinin düzenlenmiş, okunabilir ve sürüm kontrollü hâlidir. Her hafta tek bir soruya cevap verir ve bir sonraki haftanın girdisini üretir:
 
 ```
 Hafta 1  Neyi koruyoruz?          → Safety Function Map
@@ -20,6 +20,8 @@ Hafta 2  Nasıl bölgelere ayırırız? → Zone / Conduit Diagram
 Hafta 3  En büyük risk hangisi?    → Risk Register
 Hafta 4  Uzaktan erişimi nasıl güvenli yaparız? → Secure Architecture
 Hafta 5  Bir açık çıktığında ne yaparız? → Vulnerability Decision
+Hafta 6  Saldırı olduysa ilk saatlerde ne yaparız? → Incident Workflow
+Hafta 7  YZ yanılırsa insan nasıl korunur? → AI Fail-Safe Decision
 ```
 
 ## 🗂️ Haftalar
@@ -31,6 +33,8 @@ Hafta 5  Bir açık çıktığında ne yaparız? → Vulnerability Decision
 | 03 | [Threat & Risk + Risk Matrix](labs/hafta-03-threat-risk-matrix/) | Risk Register | EP 04 |
 | 04 | [Secure Remote Access](labs/hafta-04-secure-remote-access/) | Secure Architecture | EP 02 + EP 06 |
 | 05 | [SBOM / CVE / Patch](labs/hafta-05-sbom-cve-patch/) | Vulnerability Decision | EP 09 · 10 · 11 |
+| 06 | [CRA Incident Simulation](labs/hafta-06-cra-incident-simulation/) | Incident Workflow | EP 13 |
+| 07 | [AI Safety Challenge](labs/hafta-07-ai-safety-challenge/) | AI Fail-Safe Decision | EP 03 + EP 15 |
 
 ## 🏭 İncelenen makine
 
@@ -69,11 +73,13 @@ flowchart LR
 │   ├── hafta-02-iec62443-zone-conduit/
 │   ├── hafta-03-threat-risk-matrix/
 │   ├── hafta-04-secure-remote-access/
-│   └── hafta-05-sbom-cve-patch/
+│   ├── hafta-05-sbom-cve-patch/
+│   ├── hafta-06-cra-incident-simulation/
+│   └── hafta-07-ai-safety-challenge/
 ├── docs/
 │   └── kaynaklar-ve-varsayimlar.md
 └── assets/
-    ├── Hafta01-05_Lab_Foyleri.pdf  ← orijinal föyler (kapak + Hafta 1–5 + kaynaklar)
+    ├── Lab_Foyleri_Hafta01-07.pdf  ← orijinal föylerin tamamı
     └── foyler/                     ← sayfa görüntüleri
 ```
 
@@ -84,6 +90,8 @@ flowchart LR
 3. **S = 3 ise öne al:** Ciddiyet geri dönüşsüzse skor düşük olsa bile senaryo görünür kalır.
 4. **İki katman, ikisi de şart:** erişim güvenliği (girişi zorlaştır) + emniyet bağımsızlığı (girse bile insan korunur).
 5. **CVSS tek başına karar değildir:** bileşen var mı, sürüm etkileniyor mu, açık ulaşılabilir mi? Yama önce test edilir, sonra emniyet validasyonu tekrarlanır.
+6. **Önce emniyet, hemen sonra kanıt:** olayda "resetleyip devam edelim" yok; CRA 24 s / 72 s / 14 gün akışın kilometre taşlarıdır.
+7. **Prediction ≠ Safety:** YZ karar önerir; emniyeti garanti eden mimari YZ'nin dışındadır.
 
 ## 📚 Mevzuat ve standartlar
 
@@ -92,10 +100,6 @@ flowchart LR
 - **EN 12622** (hidrolik abkant presler) · **EN ISO 13849-1** (PL) · **EN ISO 13855** (emniyet mesafesi) · **IEC 62443**
 
 Ayrıntılı kaynak listesi ve varsayımlar: [docs/kaynaklar-ve-varsayimlar.md](docs/kaynaklar-ve-varsayimlar.md)
-
-## 🔜 Sonraki haftalar
-
-Hafta 6–7 (CRA Incident Simulation · AI Safety Challenge) bu repoya ileride eklenecektir.
 
 ---
 

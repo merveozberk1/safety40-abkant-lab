@@ -2,7 +2,7 @@
 
 [← Ana sayfa](README.md)
 
-Bu analiz, **Hafta 1–5 laboratuvar çalışmasının kendisini** (yöntem, içerik ve repo olarak sunumu) değerlendirir — makineyi veya üreticiyi değil.
+Bu analiz, **Hafta 1–7 laboratuvar çalışmasının kendisini** (yöntem, içerik ve repo olarak sunumu) değerlendirir — makineyi veya üreticiyi değil.
 
 |  | **Yardımcı** | **Zararlı** |
 |---|---|---|
@@ -20,6 +20,7 @@ Bu analiz, **Hafta 1–5 laboratuvar çalışmasının kendisini** (yöntem, iç
 - **Şeffaflık:** Doğrulanamayan her nokta *(varsayım)* olarak işaretlenmiş, kaynaklar listelenmiş, sorumluluk reddi açık.
 - **Tarafsızlık:** Hafta 4 çözüm dayatmıyor, gereksinim tanımlıyor; tasarım kararını üreticiye bırakıyor.
 - **Olgun zafiyet yönetimi yaklaşımı:** Hafta 5, CVSS skoruna körü körüne tepki vermek yerine üç şart kontrolü, önce test, yedek/geri dönüş planı ve yama sonrası emniyet re-validasyonunu içeren gerçekçi bir karar akışı kuruyor.
+- **Uçtan uca kapsam:** Tasarımdan (Hafta 1–4) zafiyet yönetimine (5), olay müdahalesine (6) ve YZ entegrasyonuna (7) kadar makinenin tüm yaşam döngüsü ele alınıyor.
 - **Sürüm kontrollü, okunabilir format:** Markdown + Mermaid diyagramlarıyla GitHub'da doğrudan okunabiliyor, değişiklik geçmişi izlenebiliyor.
 
 ## ⚠️ Zayıf Yönler (Weaknesses)
@@ -29,7 +30,7 @@ Bu analiz, **Hafta 1–5 laboratuvar çalışmasının kendisini** (yöntem, iç
 - **Basit risk modeli:** L × S × E (1–3) eğitim için anlaşılır ama ince ayrım yapamıyor; EN ISO 12100 / ISO 13849-1 risk grafiği veya IEC 62443-3-2 ile resmî olarak eşleştirilmemiş.
 - **Sınırlı senaryo sayısı:** Risk Register yalnızca 3 senaryo içeriyor; içeriden kötü niyetli kullanıcı, tedarik zinciri (firmware güncellemesi) veya fiziksel HMI müdahalesi gibi kapılar ayrı ele alınmamış.
 - **PL değeri doğrulanmamış:** PLr e / Kat. 4 "tipik beklenti" olarak alınmış; hesaplama (MTTFd, DC, CCF) yapılmamış.
-- **Eksik kapsam:** Hafta 6–7 (CRA olayı, YZ) bu repoda henüz yok; uçtan uca resim tamamlanmamış.
+- **Masa başı simülasyon:** Hafta 6 olay senaryosu ve Hafta 7 YZ sistemi gerçek bir tatbikat ya da prototip üzerinde denenmedi; süreler, roller ve %95 güven eşiği örnek değerlerdir.
 - **Örnek zafiyet kaydı:** Hafta 5'teki CVE (CVE-XXXX-XXXX, Component X) eğitim amaçlı bir yer tutucudur; gerçek bir SBOM veya üretici bildirimi üzerinden çalışılmamıştır.
 
 ## 🚀 Fırsatlar (Opportunities)
